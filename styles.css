@@ -1,0 +1,9 @@
+body { font-family: sans-serif; margin:0; display:flex; }
+.sidebar { width:250px; background:#0f172a; color:white; height:100vh; padding:10px; }
+.main { flex:1; padding:10px; }
+.nav-item { display:block; padding:8px; cursor:pointer; color:#cbd5e1; }
+.nav-item.active { background:#22c55e; color:white; }
+.topbar { display:flex; gap:10px; align-items:center; }
+.page { display:none; }
+.page.active { display:block; }
+.card { background:white; padding:10px; margin-top:10px; }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BoviSync | Dairy Herd Management</title>
+
+  <!-- PWA / Mobile Enhancements -->
+  <meta name="theme-color" content="#22c55e">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">🐄 BoviSync</div>
+    <a data-page="dashboard" class="nav-item active">📊 Dashboard</a>
+    <a data-page="about" class="nav-item">👤 About Developer</a>
+    <div class="sidebar-footer">📍 Green Pasture Farm<br>Ogun State, Nigeria</div>
+  </aside>
+
+  <div class="overlay" id="overlay"></div>
+
+  <div class="main">
+    <div class="topbar">
+      <button class="menu-toggle" id="menuToggle">☰</button>
+      <h3 id="pageTitle">Dashboard</h3>
+      <button class="export-btn" onclick="exportData()">Export JSON</button>
+      <button class="export-btn" onclick="generateShareLink()">Share</button>
+    </div>
+
+    <div class="container">
+      <div id="dashboard" class="page active">
+        <p>Overview for today.</p>
+      </div>
+
+      <div id="about" class="page">
+        <div class="card">
+          <div class="card-header">
+            <h2>About Me</h2>
+            <div id="bioControls">
+              <button class="edit-btn" onclick="editBio()">Edit</button>
+            </div>
+          </div>
+          <p id="bioText">Welcome to BoviSync.</p>
+        </div>
+
+        <div id="skillsContainer"></div>
+        <div id="projectsContainer"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
